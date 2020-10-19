@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Chilanka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>about page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+
+        }
+
+
+        .navbar {
+        overflow: hidden;
+        background-color: #52575d;
+        position: fixed;
+        top: 0;
+    
+        width: 100%;
+        height: 9vh;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color:#fddb3a ;
+        border-right:1px solid #fddb3a;
+        padding: 1rem ;
+        width:25% ;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        border: 1px s;
+        font-family: 'Teko', sans-serif;
+
+    }
+
+    .navbar a:hover {
+        background: #fddb3a;
+        color:#52575d ;
+       
+    }
+
+
+        .big-container {
+            display: flex;
+
+            width: 100vw;
+            height: 100vh;
+          background-color: #f6f4e6;
+            justify-content: center;
+
+
+
+        }
+
+        .box {
+            display: flex;
+            position: relative;
+            background-color: #52575d;
+            border-top-left-radius: 1.5rem;
+            border-bottom-left-radius: 1.5rem;
+            width: 25%;
+            height: 50%;
+            margin-top: 10rem;
+            opacity: 80%;
+       
+        }
+        .box2 {
+            display: flex;
+           position: relative;
+           righ:50%;
+            background-color: #41444b;
+            border-top-right-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            width: 50%;
+            height: 50%;
+            
+            margin-top: 10rem;
+            
+            opacity: 80%;
+
+        }
+
+
+        img {
+            width: 60%;
+            height: 50%;
+            margin-top: 8%;
+            margin-left: 15%;
+            border-radius: 2rem;
+            transition: width 2s, height 4s;
+
+        }
+
+        img:hover {
+            width: 70%;
+            height: 60%;
+        }
+
+        p {
+            position: absolute;
+            width: 97%;
+            padding-top: 2%;
+            padding-left: 10%;
+            font-size: .95rem;
+            color: #f6f4e6;
+            font-weight: bold;
+            font-family: 'Chilanka', cursive;
+        }
+        .skills {
+            position: absolute;
+            width: 70%;
+            height: 50%;
+            top: 10%;
+            left: 15%;
+            color:#f6f4e6 ;
+
+        }
+
+        .container {
+            width: 100%;
+            background-color: #f6f4e6;
+            border-radius: 1.5rem;
+
+        }
+
+        .html,
+        .css,
+        .photo,
+        .ill {
+
+            text-align: center;
+            font-weight: bolder;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            color: #f6f4e6;
+            border-radius: 1rem;
+
+        }
+h3,h2{
+    font-family: 'Chilanka', cursive;
+    margin-top: .5em;
+}
+        .html {
+            width: 85%;
+            background-color: #fddb3a;
+            
+        }
+
+        .css {
+            width: 80%;
+            background-color: #fddb3a;
+        }
+
+        .photo {
+            width: 75%;
+            background-color: #fddb3a;
+        }
+
+        .ill {
+            width: 60%;
+            background-color: #fddb3a;
+        }
+        @media only screen and (max-width: 600px) {
+            p{
+                
+                font-size: .5rem;
+            }
+            .skills {
+            
+            height: 45%;
+            top: 5%;
+         
+
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-container">
+        <div class="navbar">
+            <a  href="http://127.0.0.1:5500/portfolio2/home-page.html">home</a>
+            <a href="http://127.0.0.1:5500/portfolio2/about.html">about</a>
+            <a href="http://127.0.0.1:5500/portfolio2/projects.html">projects</a>
+            <a href="http://127.0.0.1:5500/portfolio2/contact1.html">contact</a>
+        </div>
+        <div class="box">
+            
+                <div>
+                    <img src="Untitled.png">
+                    <p>saja dahamsheh is an electrical power engineer following my passion in coding by
+                        Training at orange
+                        coding academy so im a professional full-stack developer to become in a few month. </p>
+                </div>
+                
+            </div>
+            
+            <div class="box2">
+                <div class="skills">
+    <h2>my skills:</h2>
+    <br>
+    
+                    <h3>html</h3>
+                    <div class="container">
+                        <div class="html">85%</div>
+                    </div>
+                    <h3>Css</h3>
+                    <div class="container">
+                        <div class="css">80%</div>
+                    </div>
+                    <h3>photoshop</h3>
+                    <div class="container">
+                        <div class="photo">75%</div>
+                    </div>
+                    <h3>illustrator</h3>
+                    <div class="container">
+                        <div class="ill">50%</div>
+    
+                    </div>
+
+
+            </div>
+           
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>contactMePage</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .navbar {
+        overflow: hidden;
+        background-color: #52575d;
+        position: fixed;
+        top: 0;
+    
+        width: 100%;
+        height: 8vh;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color:#fddb3a ;
+        border-right:1px solid #fddb3a;
+        padding:1rem ;
+        width: 25%;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: 'Teko', sans-serif;
+    }
+
+    .navbar a:hover {
+        background: #fddb3a;
+        color:#52575d ;
+       
+
+    }
+
+.home {
+        height: 100vh;
+        width: 100vw;
+
+    }
+        
+     img {
+        background-image: url('contact-us-1024x416.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+       
+    }
+    .form{
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0, 0.4); 
+        color: white;
+        font-weight: bold;
+        border: 3px solid #fddb3a;
+        border-radius: .75rem;
+        box-shadow:#52575d .5rem .5rem .75rem .5rem;
+        position: absolute;
+        top:60%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 40%;
+        height: 70%;
+        text-align: center;
+        padding-top:2rem ;
+        padding-bottom: .5rem;
+ 
+        }
+
+    label{
+    margin-right: .5rem;
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2rem;
+
+        }
+
+    #name{
+        position: relative;
+        left: 1rem;
+        width: 45%;
+        height: 7%;
+        margin-right: 1rem;
+        
+    }
+    #email{
+        position: relative;
+        left: 1rem;
+        width: 45%;
+        height: 7%;
+        margin-right: 1rem;
+    }
+    #phone{
+        position: relative;
+        left: 1rem;
+        width: 45%;
+        height: 7%;
+        margin-right: 1rem;
+    }
+    
+    .fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 65px;
+  
+  text-align: center;
+  text-decoration: none;
+  margin:1.5rem .65rem;
+  border-radius: 40%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-github {
+  background: black;
+  color: white;
+}
+
+textarea{
+    width: 15rem;
+    height: 7rem;
+}
+@media only screen and (max-width: 600px) {
+    textarea{
+        width: 6rem;
+        height: 4rem;   
+    }
+    .form{
+        margin-top: .05rem;
+        margin-bottom: 1rem;
+    }
+   
+    .fa {
+  padding: 5px;
+  font-size: 10px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin:.5rem .1rem;
+  border-radius: 40%;
+}
+
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="home">
+        <div class="navbar">
+            <a  href="http://127.0.0.1:5500/portfolio2/home-page.html">home</a>
+            <a href="http://127.0.0.1:5500/portfolio2/about.html">about</a>
+            <a href="http://127.0.0.1:5500/portfolio2/projects.html">projects</a>
+            <a href="http://127.0.0.1:5500/portfolio2/contact1.html">contact</a>
+        </div>
+
+        <img src="contact-us-1024x416.jpg" alt="">
+        
+<div class="form">
+
+
+    
+    <label id="PAN" for="name" class="center">Entire your name</label>
+
+    <input type="text" name="name" id="name">
+    <br> <br>
+    <br> 
+
+
+    <label for="email">Enter your email</label>
+
+    <input type="email" id="email" name="email">
+
+    <br>
+    <br>
+    <br>
+    <label for="phone">Enter your phone</label>
+
+    <input type="number" id="phone" name="phone">
+
+
+    <br>
+
+    <br>
+    <br>
+
+
+  <textarea name="text-area" id="text" >
+     tell us about your project
+  </textarea>
+
+  
+  <div class="social">
+  
+      <a href="https://web.facebook.com/saja.dahamsheh/" class="fa fa-facebook "></a>
+      <a href="https://www.linkedin.com/in/saja-dahamsheh/" class="fa fa-linkedin"></a>
+      <a href="https://github.com/sajadahamsheh" class="fa fa-github"></a>
+      
+     
+</div>
+</body>
+</html>

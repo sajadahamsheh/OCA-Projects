@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>projects page</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+
+        }
+
+        .navbar {
+        overflow: hidden;
+        background-color: #52575d;
+        width: 100%;
+        height: 7vh;
+        
+        
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color:#fddb3a ;
+        border-right:1px solid #fddb3a;
+        padding: .5rem ;
+        width:25% ;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: 'Teko', sans-serif;
+}
+       
+
+    .navbar a:hover {
+        background: #fddb3a;
+        color:#52575d ;
+       
+    }
+
+        .container {
+            display: grid;
+            background-color: #f6f4e6;
+            width: 100%;
+            height: 100%;
+           
+        }
+
+        .cont1{
+            display: grid;
+            background-color: #f6f4e6;
+            width: 80%;
+            height: 70%;
+            margin: auto;
+            margin-top: 1%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 1rem;
+           
+
+
+        }
+
+        .item {
+            background-color: #52575d;
+            border: #fddb3a .2rem solid;
+            justify-content: center;
+            box-shadow: #52575d .5rem .5rem .5rem;
+
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            justify-self: center;
+
+        }
+
+
+        p {
+            background-color: #f6f4e6;
+            font-family: 'Chilanka', cursive;
+
+        }
+
+        .vist-me{
+        text-align: center;
+        position: relative;
+        left:100%;
+        margin-top: 2rem;
+        font-size: 15px;
+        font-weight: bold;
+        background: gray;
+        padding: .75rem;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), ;
+        border-radius: .5rem;
+        font-family: 'Chilanka', cursive;
+
+        }
+        button{
+            background-color:#fddb3a;
+            border-radius: .2rem;
+            padding: .1rem .3rem;
+            cursor: pointer;
+            width: 4rem;
+            color:gray;
+            font-family: 'Chilanka', cursive;
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            .vist-me{
+                margin-top: 1rem;
+                font-size: 7px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+</body>
+
+<div class="container">
+    <div class="navbar">
+        <a  href="http://127.0.0.1:5500/portfolio2/home-page.html">home</a>
+        <a href="http://127.0.0.1:5500/portfolio2/about.html">about</a>
+        <a href="http://127.0.0.1:5500/portfolio2/projects.html">projects</a>
+        <a href="http://127.0.0.1:5500/portfolio2/contact1.html">contact</a>
+    </div>
+    
+    <div class="cont1">
+        <div class="item">
+            <img src="project1.PNG">
+    
+        </div>
+    
+    
+        <div class="item">
+            <img src="project2.PNG">
+        </div>
+        <div class="item">
+            <img src="project3.PNG">
+    
+        </div>
+    
+        <div class="item">
+            <img src="project4.PNG">
+    
+        </div>
+    
+        <div class="item">
+            <img src="project5.PNG">
+    
+        </div>
+    
+        <div class="item">
+            <img src="project6.PNG">
+    
+        </div>
+        <div class="item">
+            <img src="project7.PNG">
+    
+        </div>
+        <div class="item">
+            <img src="project8.PNG">
+    
+        </div>
+        <div class="item">
+            <img src="project9.PNG ">
+    
+        </div>
+       
+        <div class="vist-me">
+            <label for="vbttn">
+          
+
+                You can see more from in my github
+            
+            </label> 
+            <button id="vbttn" type="button" > <a style="text-decoration: none;" href="https://github.com/sajadahamsheh">
+                
+                Github
+            </a>
+        </button>
+         </div>
+
+
+    </div>
+
+
+</div>
+
+</html>
