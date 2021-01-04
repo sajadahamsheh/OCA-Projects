@@ -8,6 +8,30 @@ const { JWT_SECRET } = require("../keys");
 const requireLogin = require("../middleware/requireLogin");
 let Usermodel = require("../models/User")
 
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+	service: 'gmail',
+	auth: {
+		user: 'vpna3mar@gmail.com',
+		pass: '357412300'
+	}
+});
+
+var mailOptions = {
+	from: 'Oregano@Info.com',
+	to: 'ahmada3mar@gmail.com',
+	subject: 'verification Code For Oregano',
+	html: '' +
+		'<h1 style="text-align: center" >Your Code Is <span style="color: #856404" >96210</span>  </h1>' +
+		''
+};
+
+
+
+
+
+
 router.get("/protected", requireLogin, (req, res) => {
 	res.send("Hello user");
 });
@@ -34,6 +58,13 @@ router.post("/signup", (req, res) => {
 					user
 						.save()
 						.then((user) => {
+							transporter.sendMail(mailOptions, function(error, info){
+								if (error) {
+									console.log(error);
+								} else {
+									console.log('Email sent: ' + info.response);
+								}
+							});
 							res.json({ message: "Saved Successfully", user });
 						})
 						.catch((err) => {
@@ -97,6 +128,13 @@ router.post("/updateimg", (req, res) => {
 	})
 
 
+
+		// msg.save().then(res.send("updated"))
+
+
+
+
+
 })
 
 router.post("/cheeckout",(req,res)=> {
@@ -106,14 +144,12 @@ router.post("/cheeckout",(req,res)=> {
 		// console.log(doc)
 		User.findOne({_id: req.body.id})
 			.then((savedUser) => {
-				res.send(savedUser)
-				console.log(savedUser)
+				res.send(savedUser).catch(err=>res(err))
+
 
 			})
 
-
 	})
-
 
 })
 module.exports = router;
