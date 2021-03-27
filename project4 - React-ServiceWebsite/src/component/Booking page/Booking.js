@@ -67,6 +67,7 @@ class Booking extends Component {
 render(){
     document.title ="DAMSA | Booking Page"; 
     document.getElementsByTagName("META")[2].content="Damsa is a website for booking photography sessions anywhere and anytime with a very easy to use and simple booking form";
+    
     let Close =() => this.setState({ isSubmit:false});
     return(
         <div className="booking_form_container">

@@ -82,16 +82,19 @@ def datasource(request,id):
     return render(request ,"index.html" , {"testname":Test_Name.objects.filter(Data_Source=id) , 'datasource':Data_Source.objects.get(id=id) , 'data_sources' : Data_Source.objects.all() })
 @login_required(login_url='/login')
 def dataset(request,id,name):
-    data = serializers.serialize('json', Data_Set.objects.filter(Data_Source=id , Test_Name=name ))
-    return JsonResponse(data , safe=False)
+    if name == "all":
+        data = serializers.serialize('json', Data_Set.objects.filter(Data_Source=id ))
+        return JsonResponse(data , safe=False)
+
+    else:
+     data = serializers.serialize('json', Data_Set.objects.filter(Data_Source=id , Test_Name=name ))
+     return JsonResponse(data , safe=False)
 
 def gen_message(msg):
     return 'data: {}'.format(msg)
 
 
-def iterator():
-    for i in range(10000):
-        yield gen_message('iteration ' + str(i))
+
 
 @login_required(login_url='/login')
 def test(request):
