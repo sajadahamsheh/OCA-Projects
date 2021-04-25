@@ -9,7 +9,7 @@ const HorizontalLineDivider = () => {
       </View>
     );
 };
-const Category = ({ navigation}) => {
+const Donate = ({ navigation}) => {
   function renderHeader() {
     return (
       <View
@@ -42,7 +42,7 @@ const Category = ({ navigation}) => {
       </View>
     );
   }
-  function renderCategoryData() {
+  function renderDonateData() {
     return (
       <View 
         style={{
@@ -69,7 +69,7 @@ const Category = ({ navigation}) => {
                     color:COLORS.white,
                     textAlign:"center",
                     marginVertical: SIZES.padding,}}>
-                Buy a book for you and for a kid who cant' buy one, all your donations will be gathered to buy books for student in schools located in the less fortunate districts.
+                Buy a book for you and for a kid who can't buy one, all your donations will be gathered to buy books for student in schools located in the less fortunate districts.
             </Text>
             <View style={{ flexDirection: "row",padding:5}}>
                 <Image
@@ -145,10 +145,10 @@ const Category = ({ navigation}) => {
       <ScrollView style={{ marginTop: SIZES.radius }}>
         {/* Categories Section */}
         <View style={{ marginTop: SIZES.padding }}>
-          <View>{renderCategoryData()}</View>
+          <View>{renderDonateData()}</View>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 };
-export default Category;
+export default Donate;

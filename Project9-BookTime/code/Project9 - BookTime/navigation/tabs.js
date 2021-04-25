@@ -7,13 +7,6 @@ import { icons, COLORS } from "../constants";
 import { DrawerActions } from "@react-navigation/native";
 import { BookMarks } from "../screens/";
 
-const menu = () => {
-  <NavigationContainer>
-    <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={Home} />
-    </Drawer.Navigator>
-  </NavigationContainer>;
-};
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +19,7 @@ const tabOptions = {
 };
 
 const Tabs = ({ navigation }) => {
-  const [marksTab, setMarksTab] = useState([]);
+  
 
   return (
     <Tab.Navigator
@@ -66,7 +59,7 @@ const Tabs = ({ navigation }) => {
                 <TouchableOpacity
                   onPress={() => {
                     navigation.navigate("BookMarks");
-                    setMarksTab(["d"]);
+                    
                   }}
                 >
                   <Image

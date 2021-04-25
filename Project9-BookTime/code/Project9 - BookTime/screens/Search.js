@@ -5,11 +5,12 @@ import { COLORS, FONTS, SIZES, icons, images } from "../constants";
 
 function Search({ navigation }) {
   const [search, setSearch] = React.useState("");
-  const [filteredDataSource, setFilteredDataSource] = React.useState();
-  const [people, setPeople] = React.useState(myBooksData);
+  const [filteredDataSource, setFilteredDataSource] = React.useState([]);
+  const [Books, setBooks] = React.useState(myBooksData);
+  
   const searchFilterFunction = (text) => {
     if (text) {
-      const newData = people.filter(function (item) {
+      const newData = Books.filter(function (item) {
       const itemData = item.bookName ? item.bookName : "";
       const textData = text;
       return itemData.indexOf(textData) > -1;
@@ -17,7 +18,7 @@ function Search({ navigation }) {
     setFilteredDataSource(newData);
     setSearch(text);
   } else {
-      setFilteredDataSource(" ");
+      setFilteredDataSource([]);
       setSearch(text);
     }
   };
