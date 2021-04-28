@@ -7,6 +7,7 @@ use App\Test;
 use App\TestAnswer;
 use App\order_courses;
 use App\Courses;
+use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreResultsRequest;
 use App\Http\Requests\UpdateResultsRequest;
@@ -22,14 +23,22 @@ class ResultsController extends Controller
      */
     public function index()
     {
-        $orders = order_courses::all();
+        $vars=Order ::where('user_id', Auth::id())->get();
+        foreach ($vars as $var){
+            $orders = order_courses::where('order_id',$var->id)->get();    
+        }
+        
+        
         $courses = Courses::all();
-        // dd($orders);
         // $products = $products::where('order_id' , $id) -> get() ;
 
         $results = Test::all()->load('user');
+        if (!Auth::user()) {
+            $results = $results->where('user_id', '=', Auth::id())->get();
+           
+        }
         
-        return view('results.index', compact('results','orders','courses'));
+        return view('results.index', compact('results','orders','courses','vars'));
     }
 
     /**

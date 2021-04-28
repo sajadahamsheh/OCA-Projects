@@ -29,7 +29,7 @@
             
                 <div class="col-lg-6 col-md-12">
                     <div class="team-photo mobile-mb-40">
-                 
+               
                     <h3 class="team-name">{{ auth::user()->name}}</h3>
                     <p class="team-title">
                         Assistant Professor (Accounting)
@@ -63,29 +63,30 @@
                             <table class="table table-bordered table-striped {{ count($results) > 0 ? 'datatable' : '' }}">
                                 <thead>
                                     <tr>
+                                        
                                         <th>Result</th>
-                                        <th> Test details</th>
+                                        <th> Test Details</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
                                     @if (count($results) > 0)
                                         @foreach ($results as $result)
+                                       
+                                        @if( Auth::id() ==$result['user_id'])
                                             <tr>
-                                            <!-- @if(Auth::user())
-                                            
-                                                <td> </td>
-                                            @endif -->
+                                                
                                                 
                                                 <td>{{ $result->result }}/10</td>
                                                 <td>
-                                                    <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">@lang('quickadmin.view')</a>
+                                                    <a href="{{ route('results.show',[$result->id]) }}" class="btn btn-xs btn-primary">more details</a>
                                                 </td>
                                             </tr>
+                                            @endif
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="6">@lang('quickadmin.no_entries_in_table')</td>
+                                            <td colspan="6">you did not take any exam yet</td>
                                         </tr>
                                     @endif
                                 </tbody>
@@ -106,8 +107,8 @@
                 <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem.</p>
             </div>
             <div class="row">
-                @if(auth::user())
-                    @foreach ($orders as $order) 
+                @foreach ($orders as $order)
+                
                     @foreach ($courses as $course) 
                     @if(($order['course_id'])==$course['id'])
                   
@@ -130,8 +131,9 @@
                 </div>
                     @endif
                     @endforeach
+                    
                     @endforeach
-                @endif
+                
               
                 
             </div>
