@@ -2,7 +2,7 @@
 
 @section('content')
 	<!-- Slider Area Start -->
-	<div id="rs-slider" class="slider-overlay-2">     
+		<div id="rs-slider" class="slider-overlay-2">     
         	<div id="home-slider">
 				<!-- Item 1 -->
 				<div class="item active">

@@ -24,11 +24,14 @@ class Cart
 
     public function add($course) {
         $item = [
-            'course_name' => $course->course_name,
-            'course_price' => $course->course_price,
-            'qty' => 0,
-            'course_img' => $course->course_img,
-            'course_desc' => $course->course_desc,
+            'course_name'    => $course->course_name,
+            'course_price'   => $course->course_price,
+            'qty'            => 0,
+            'course_img'     => $course->course_img,
+            'course_desc'    => $course->course_desc,
+            'course_discount'=> $course->course_discount,
+            'course_id'      => $course->id,
+            
         ];
 
         if( !array_key_exists($course->id, $this->items)) {
@@ -44,6 +47,16 @@ class Cart
         
         $this->items[$course->id]['qty']  += 1 ;
         
+    }
+    public function remove($id) {
+        // print_r($id);
+        if( array_key_exists($id, $this->items)) {
+            $this->totalQty -= $this->items[$id]['qty'];
+            $this->totalPrice -= $this->items[$id]['qty'] * $this->items[$id]['course_price'];
+            unset($this->items[$id]);
+
+        }
+
     }
 
 

@@ -1,25 +1,40 @@
-@extends('layouts.app')
+@extends('../mainSite/index2')
 
 @section('content')
-    <h3 class="page-title">@lang('quickadmin.results.title')</h3>
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="page-title">result details</h1>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li>result details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
 
-    <div class="panel panel-default">
+   
+
+    <div class="panel panel-default" style="margin: 40px;">
         <div class="panel-heading">
-            @lang('quickadmin.view-result')
+            VIEW RESULT
         </div>
 
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-bordered table-striped">
-                        <!--  -->
-                        <tr>
-                            <th>@lang('quickadmin.results.fields.date')</th>
-                            <td>{{ $test->created_at or '' }}</td>
-                        </tr>
-                        <tr>
-                            <th>@lang('quickadmin.results.fields.result')</th>
-                            <td>{{ $test->result }}/10</td>
+                    <table class="table table-bordered " >
+                        <tr > 
+                            <th>TEST RESULT</th>
+                            <td style="padding-left: 100px;" >  {{ $test->result }}/10</td>
                         </tr>
                     </table>
                 <?php $i = 1 ?>
@@ -29,12 +44,7 @@
                             <th style="width: 10%">Question #{{ $i }}</th>
                             <th>{{ $result->question->question_text or '' }}</th>
                         </tr>
-                        @if ($result->question->code_snippet != '')
-                            <tr>
-                                <td>Code snippet</td>
-                                <td><div class="code_snippet">{!! $result->question->code_snippet !!}</div></td>
-                            </tr>
-                        @endif
+                       
                         <tr>
                             <td>Options</td>
                             <td>
@@ -69,7 +79,7 @@
 
             <p>&nbsp;</p>
 
-            <a href="{{ route('tests.index') }}" class="btn btn-default">Take another quiz</a>
+            <a href="/maintopics" class="btn btn-default">Take another quiz</a>
             <a href="{{ route('results.index') }}" class="btn btn-default">See all my results</a>
         </div>
     </div>

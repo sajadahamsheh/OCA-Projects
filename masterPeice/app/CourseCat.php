@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class CourseCat extends Model
 {
     protected $table = "course_category";
-    public function Course()
+    public function Courses()
     {
-        return $this->hasMany(Course::class) ;
+        return $this->hasMany(Courses::class) ;
     }
 }

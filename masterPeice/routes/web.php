@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route :: get('/home','HomeController@index');
 Route :: get('/maincourses','mainCourseController@index');
+Route :: get('/maintopics','mainTopicController@index');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
@@ -64,6 +65,7 @@ Route::prefix('course')->group(function(){
     Route:: put('/updatecourse/{id}','courseController@update');
     Route:: get('/deletecourse/{id}','courseController@destroy');
 });
+
 Route::resource('topics', 'TopicsController');
 Route::get('topics/deletetopic/{id}', 'TopicsController@destroy');
 
@@ -73,16 +75,19 @@ Route::resource('questions', 'QuestionsController');
 Route::resource('questions_options', 'QuestionsOptionsController');
 
 Route::resource('results', 'ResultsController');
+
 Route::resource('tests', 'TestsController');
-Route::get('singelcourse/{id}', 'singelcourseController@index');
+Route::resource('tests', 'TestsController');
+Route::get('tests/{id}', 'TestsController@show');
+Route::get('tests', 'TestsController@store');
 
+Route::get('singelcourse/{id}', 'singelcourseController@index')->name('singlecourse.show');
 
-
-
+Route::delete('/courses/{course}', 'cartController@destroy')->name('courses.remove');
 
 Route::get('addToCart/{course}', 'cartController@addToCart')->name('cart.add');
 Route::get('shopping-cart', 'cartController@showCart') ->name('cart.show');
-// Route::get('/checkout/{amount}', 'cartController@checkout')->name('cart.checkout')->middleware('auth');
-// Route::get('/checkout/{amount}', 'cartController@checkout')->name('cart.checkout')->middleware('auth');
-Route::get('/checkout', 'cartController@Checkout')->name('cart.checkout')->middleware('auth');;
+
+Route::get('/checkout', 'cartController@Checkout')->name('cart.checkout')->middleware('auth');
+
 

@@ -6062,7 +6062,7 @@ ul {
 }
 
 .rs-team-style7 .item .item-team .team-img .social-icon a i:hover {
-    color: #212121;
+    color: #212121 !important;
 }
 
 .rs-team-style7 .item .item-team .team-content {
@@ -6283,7 +6283,7 @@ ul {
 }
 
 .rs-team .team-item .team-name a:hover {
-    color: #fff;
+    color: #fff !important;
 }
 
 .rs-team .team-item .team-title {
@@ -6341,7 +6341,7 @@ ul {
 }
 
 .rs-team .team-item .team-social .social-icon:hover {
-    background-color: #e41f05;
+    background-color: #e41f05 !important;
 }
 
 .rs-team .team-item:hover .team-content {
@@ -6402,7 +6402,7 @@ ul {
 }
 
 .rs-team-2 .team-item .team-img:hover .social-icon a:hover {
-    color: #fff;
+    color: #fff !important;
 }
 
 .rs-team-2 .team-item .team-img:hover:before {
@@ -6425,7 +6425,7 @@ ul {
 }
 
 .rs-team-2 .team-item .team-body .name:hover {
-    color: #ff3115;
+    color: #ff3115 !important;
 }
 
 .rs-team-2 .team-item .team-body .designation {

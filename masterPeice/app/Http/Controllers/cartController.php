@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
-use App\Ordercourses;
+use App\order_courses;
 use Illuminate\Http\Request;
-use App\Course ;
+use App\Courses ;
 use App\Cart ;
 
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Session ;
 
 class cartController extends Controller
 {
-    public function addToCart(Course $course ) {
+    public function addToCart(Courses $course ) {
         
         if (session()->has('cart')) {
             $cart = new Cart(session()->get('cart'));
@@ -23,7 +23,7 @@ class cartController extends Controller
         $cart->add($course);
         // dd($cart);
         session()->put('cart', $cart);
-        return redirect('shopping-cart')->with('success', 'course was added');
+        return back()->with('success', 'course was added');
     }
 
 
@@ -46,42 +46,50 @@ class cartController extends Controller
     public function Checkout()
     {
         if(Auth()){
-        $totalPrice = 0 ;
         $totalQty   = 0 ;
-
         $order = new Order();
-        $order -> total_price = session()->get('cart');
-        dd(session()->get('cart '));
-        $order -> user_id = Auth::user()->id ;
+        $order -> total_price = (Session::get('cart')->totalPrice) ;
+        // dd( $order -> total_price);
+        $order -> user_id = Auth()->user()->id ;
         $order -> save();
-
-        foreach(Session::get('cart.teams') as $product){
-
+        
+        $cart=Session::get('cart');
+        
+        foreach($cart->items as $item){
             
-            $orderProduct = new orders_product();
-            $orderProduct -> quantity = $product -> qty ;
-            $orderProduct -> quantity = $product -> qty ;
-            $orderProduct -> order_details = $product -> pro_name ;
-            $orderProduct -> product_id = $product -> id ;
+            // dd($order->id);
+
+            $orderProduct = new order_courses();
+            $orderProduct -> order_details = $item['course_name'] ;
+            $orderProduct -> course_id = $item['course_id'] ;
             $orderProduct -> order_id = $order -> id ;
-            $orderProduct -> single_price = ($product -> pro_price - ($product -> pro_discount * $product -> pro_price) /100 ) ;
+            $orderProduct -> single_price = ($item['course_price'] - ($item['course_discount'] * $item['course_price']) /100 ) ;
             $orderProduct -> save();
         }
 
-        Session::forget('cart.teams');
-        return redirect('profile') ;
+        Session::forget('cart');
+        return redirect('shopping-cart') ;
 
         }else{
             return redirect('login') ;
         }
+    }
+    public function destroy(Courses $course)
+        {
+            
+        $cart = new Cart( session()->get('cart'));
+        $cart->remove($course->id);
 
+        if( $cart->totalQty <= 0 ) {
+            session()->forget('cart');
+        } else {
+            session()->put('cart', $cart);
+        }
 
-        
+        return redirect()->route('cart.show')->with('success', 'Product was removed');
 
-
-        
+        }
     }
 
-}
 
 

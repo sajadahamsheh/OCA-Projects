@@ -267,7 +267,7 @@
         <!--Full width header End-->
         @yield('content')
                 <!-- Footer Start -->
-                <footer id="rs-footer" class="bg3 rs-footer mt-0">
+        <footer id="rs-footer" class="bg3 rs-footer mt-5" style="margin-top: 120px !important;">
 			<div class="container">
 				<!-- Footer Address -->
 				<div>

@@ -19,26 +19,24 @@ class TestsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show($id)
     {
-        // $topics = Topic::inRandomOrder()->limit(10)->get();
-
-        $questions = Question::inRandomOrder()->limit(10)->get();
-        foreach ($questions as &$question) {
-            $question->options = QuestionsOption::where('question_id', $question->id)->inRandomOrder()->get();
-        }
-
-        /*
-        foreach ($topics as $topic) {
-            if ($topic->questions->count()) {
-                $questions[$topic->id]['topic'] = $topic->title;
-                $questions[$topic->id]['questions'] = $topic->questions()->inRandomOrder()->first()->load('options')->toArray();
-                shuffle($questions[$topic->id]['questions']['options']);
-            }
-        }
-        */
-
-        return view('tests.create', compact('questions'));
+     
+            $topic = Topic::find($id);
+            // $questions = Question::where('topic_id', $questions->id)->random()->limit(10)->get();
+          
+            
+            $questions= $topic->questions()->random()->limit(10)->get();
+            foreach ($questions as $question) {
+                
+                // dd($question);
+                // $question->main = Question::where('topic_id', $question->topic_id)->get();
+                $question->options = QuestionsOption::where('question_id', $question->id)->get();
+                // dd($question->options);
+                
+                }  
+                
+            return view('tests.create', compact('questions','topic'));
     }
 
     /**
@@ -49,6 +47,7 @@ class TestsController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $result = 0;
 
         $test = Test::create([

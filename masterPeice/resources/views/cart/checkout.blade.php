@@ -4,9 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-        @php 
-        dd ($amount)
-         @endphp
+       
         
             <p class="mb-5">
                 Total Amount is <strong> ${{ $amount}}</strong>

@@ -33,7 +33,16 @@
                                         @foreach( $cart->items as $course)
                                        
 										<tr>
-											<td><i class="fa fa-times"></i></td>
+										<td>
+										<form action="{{ route('courses.remove', $course['course_id'] )}}" method="post">
+                                                @csrf
+                                                @method('delete')
+												
+												  <button type="submit"  ><i class="fa fa-times"></i></button>
+                                                
+
+                                        </form>
+										</td>
 											<td><img src="images/{{$course['course_img']}}" alt=""/></td>
 											<td>
 												<div class="des-pro">

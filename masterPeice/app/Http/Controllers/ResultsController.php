@@ -5,16 +5,15 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Test;
 use App\TestAnswer;
+use App\order_courses;
+use App\Courses;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreResultsRequest;
 use App\Http\Requests\UpdateResultsRequest;
 
 class ResultsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
 
     /**
      * Display a listing of Result.
@@ -23,11 +22,14 @@ class ResultsController extends Controller
      */
     public function index()
     {
+        $orders = order_courses::all();
+        $courses = Courses::all();
+        // dd($orders);
+        // $products = $products::where('order_id' , $id) -> get() ;
+
         $results = Test::all()->load('user');
-
-       
-
-        return view('results.index', compact('results'));
+        
+        return view('results.index', compact('results','orders','courses'));
     }
 
     /**
@@ -38,7 +40,7 @@ class ResultsController extends Controller
      */
     public function show($id)
     {
-        $test = Test::find($id)->load('user');
+        $test = Test::find($id);
 
         if ($test) {
             $results = TestAnswer::where('test_id', $id)

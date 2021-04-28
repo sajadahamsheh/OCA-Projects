@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Course;
+use App\Courses;
 use App\CourseCat;
 class courseController extends Controller
 {
@@ -13,7 +13,7 @@ class courseController extends Controller
     }
     
    public function index(){
-       $courses =Course::all();
+       $courses =Courses::all();
        $cats    =CourseCat :: all();
        return view ('dashboard/course',compact('courses','cats'));
    }
@@ -34,7 +34,7 @@ class courseController extends Controller
         $imageName= 'default.png';
     }
 
-    $course = new Course();
+    $course = new Courses();
     $course ->course_name     =$req['course_name']; 
     $course ->course_price    =$req['course_price']; 
     $course ->course_desc     =$req['course_desc']; 
@@ -45,7 +45,7 @@ class courseController extends Controller
     return redirect('/course');
    }
    public function edit($id){
-       $course = Course :: find ($id);
+       $course = Courses :: find ($id);
        $cat= CourseCat:: all();
        return view ('dashboard/editcourse' ,compact('course','cat') );
    }
@@ -54,10 +54,10 @@ class courseController extends Controller
             $imageName = time().'.'.request()->course_img->getClientOriginalExtension();
             request()->course_img->move(public_path('images'), $imageName);
         }else {
-            $courseImg=Course::find($id);
+            $courseImg=Courses::find($id);
             $imageName=$courseImg->course_img;
         }  
-        $course = new Course();
+        $course = new Courses();
         $course = $course -> find($id);
         $course ->course_name     =$req['course_name']; 
         $course ->course_price    =$req['course_price']; 
@@ -69,7 +69,7 @@ class courseController extends Controller
         return redirect('/course');
    }
    public function destroy($id){
-       $var = Course :: destroy($id);
+       $var = Courses :: destroy($id);
        return redirect('/course');
    }
 
