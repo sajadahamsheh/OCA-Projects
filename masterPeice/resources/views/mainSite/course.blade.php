@@ -39,18 +39,18 @@
 		                <div class="course-item">
 		                    <div class="course-img">
 		                        <img style="height: 270px ; width: 370px;" src="images/{{$course['course_img']}}" alt="" />
-		                        <span class="course-value">$450</span>
+		                        <span class="course-value">{{$course['course_price']}} $</span>
 		                        <div class="course-toolbar">
 								@foreach ($cats as $cat)
 									@if($course->cat_id == $cat->id)
-		                    		<h4 class="course-category"><a href="#">{{$cat->cat_name}}</a></h4>
+		                    		<h4 class="course-category"><a href="#">{{$course['course_name']}}</a></h4>
 									@endif	
 								@endforeach
 		                        </div>
 		                    </div>
 		                    <div class="course-body">
 		                    	<div class="course-desc">
-		                    		<h4 class="course-title"><a href="courses-details.html">{{$course['course_name']}}</a></h4>
+		                    		<h4 class="course-title"><a href="courses-details.html"><small>Course details | </small></a></h4>
 		                    		<p>
 		                    			{{$course['course_desc']}}
 		                    		</p>
@@ -61,7 +61,7 @@
 		                    		<i class="fa fa-users"></i> teacher name
 		                    	</div>
 		                    	<div class="course-button">
-		                    		<a href="{{'singelcourse/'. $course->id}}" >APPLY NOW</a>
+		                    		<a href="{{'singelcourse/'. $course->id}}" >MORE DETAILS</a>
 		                    	</div>
 		                    </div>
 		                </div>						

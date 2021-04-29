@@ -1,6 +1,6 @@
 @extends('../mainSite/index2')
 @section('content')
-   	<!-- Breadcrumbs Start -->
+   		<!-- Breadcrumbs Start -->
         <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
 		    <div class="breadcrumbs-inner">
 		        <div class="container">
@@ -26,38 +26,50 @@
 				<div class="tab-content">
                     @if($cart)
 				    <div class="tab-pane active" id="checkout">
-                        <div class="row">
+                        <div >
 				            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="product-list">
-                                    <table>
-                                        @foreach( $cart->items as $course)
-                                       
-										<tr>
-										<td>
-										<form action="{{ route('courses.remove', $course['course_id'] )}}" method="post">
-                                                @csrf
-                                                @method('delete')
-												
-												  <button type="submit"  ><i class="fa fa-times"></i></button>
-                                                
+								<div >
+                                    <table class="table" style="border: 1px solid #e4e0e0 !important;">
+										<thead>
+											<tr > 
+												<th >#</th>
+												<th>course image</th>
+												<th>course name</th>
+												<th>course price</th>
+												<th>corse discount</th>
+												<th>remove course</th>
+											</tr>
+											
+										  </thead>
+										  @foreach( $cart->items as $course)
+										  <tbody class="m-t-5" >
 
-                                        </form>
-										</td>
-											<td><img src="images/{{$course['course_img']}}" alt=""/></td>
+										<tr >
+											<td>
+											1
+											</td>
+											<td><img src="images/{{$course['course_img']}}" style="width: 80px !important; height: 95px !important;" alt=""/></td>
 											<td>
 												<div class="des-pro">
-													<h4>{{$course['course_name']}}</h4>
+													<p>{{$course['course_name']}}</p>
 												</div>
 											</td>
-											<td><strong>${{$course['course_price']}}</strong></td>
-                                            <td>
-												<div class="order-pro order1">
-													<input type="number" value="01" />
-												</div>
+											<td><span class="prize" style="color: #ff3115 !important; ;">${{$course['course_price']}}</span></td>  
+											<td><strong>{{$course['course_discount']}} %</strong></td>
+											<td>
+												<form action="{{ route('courses.remove', $course['course_id'] )}}" method="post">
+														@csrf
+														@method('delete')
+														
+														<button type="submit" class='btn btn-danger next-step' style="border-radius: 0% !important; background-color: #ff3115 !important; border: 1px solid #ff3115;"  >Remove</i></button>
+														
+
+												</form>
 											</td>
-											<td><span class="prize">$20.00</span></td>  
 											
+										</tbody>
 										</tr>
+									
                                         @endforeach
 									</table>							   
 								</div><!-- .product-list end -->

@@ -101,6 +101,7 @@
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+      @yield('style')
     </head>
     <body class="inner-page">
         <!--Preloader area start here-->
@@ -150,115 +151,59 @@
 				<!-- Menu Start -->
 				<div class="menu-area menu-sticky">
 					<div class="container">
-						<div class="row rs-vertical-middle">
-							<div class="col-lg-3 col-md-12">
-								<div class="logo-area">
-									<a href="index.html"><img src="main/images/logo-white.png" alt="logo"></a>
-								</div>
-							</div>
-							<div class="col-lg-9 col-md-12">
-								<div class="main-menu">
+						<div class="main-menu">
+							<div class="row">
+								<div class="col-sm-12">
+									<!-- <div id="logo-sticky" class="text-center">
+										<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+									</div> -->
 									<a class="rs-menu-toggle"><i class="fa fa-bars"></i>Menu</a>
 									<nav class="rs-menu">
 										<ul class="nav-menu">
 											<!-- Home -->
-											<li class="menu-item-has-children"> <a href="#" class="home">Home</a>
-												 <ul class="sub-menu">
-												   <li><a href="index.html">Home One</a> </li>
-												   <li class="active"><a href="index2.html">Home Two</a> </li>
-												   <li><a href="index3.html">Home Three</a></li>
-												   <li><a href="index4.html">Home Four</a> </li>
-												   <li><a href="index5.html">Home Five</a> </li>
-												   <li><a href="instructor-home.html">Home Instructor</a> </li>
-												   <li><a href="index7.html">Home Seven</a> </li>
-												   <li><a href="index8.html">Home Eight</a> </li>
-												 </ul>
+											<li class="current-menu-item current_page_item menu-item-has-children"> <a href="/home" class="home">Home</a>
+						
 											</li>
 											<!-- End Home --> 
                                             
                                             <!--About Menu Start-->
-                                            <li class="menu-item-has-children"><a href="about.html">About Us</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="about.html">About One</a></li>
-                                                    <li><a href="about2.html">About Two</a></li>
-                                                    <li><a href="about3.html">About Three</a></li>
-                                                </ul>
+                                            <li class="menu-item-has-children"> <a href="#">About Us</a>
                                             </li>
                                             <!--About Menu End--> 
 
-                                            <!-- Drop Down -->
-											<li class="menu-item-has-children"> <a href="#">Pages</a>
-                                                <ul class="sub-menu"> 
-                                                    <li class="menu-item-has-children"> <a href="#">Teachers</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="teachers.html">Teachers</a> </li>
-                                                        <li> <a href="teachers-without-filter.html">Teachers Without Filter</a> </li> 
-                                                        <li> <a href="teachers-single.html">Teachers Single</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li class="menu-item-has-children"> <a href="#">Gallery</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="gallery.html">Gallery One</a> </li>
-                                                        <li> <a href="gallery2.html">Gallery Two</a> </li> 
-                                                        <li> <a href="gallery3.html">Gallery Three</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li class="menu-item-has-children"> <a href="#">Shop</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="shop.html">Shop</a> </li> 
-                                                        <li> <a href="shop-details.html">Shop Details</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    
-                                                    <li><a href="error-404.html">Error 404</a></li>
-                                                </ul>
+                                            <!-- Drop Down Pages Start -->
+											<li class="rs-mega-menu mega-rs"> <a href="maintopics">Tests</a>
+                                                
 											</li>
-											<!--End Icons -->
+											<!--Drop Down Pages End -->
                                             
 											<!--Courses Menu Start-->
-		                                    <li class="current-menu-item current_page_item menu-item-has-children"> <a href="#">Courses</a>
-		                                      <ul class="sub-menu">
-		                                        <li class="active"><a href="courses.html">Courses One</a></li>
-		                                        <li><a href="courses2.html">Courses Two</a></li>
-		                                        <li><a href="courses-details.html">Courses Details</a></li>
-                                                  <li><a href="courses-details2.html">Courses Details 2</a></li>
-		                                      </ul>
+		                                    <li class="menu-item-has-children"> <a href="/maincourses">Courses</a>
+		                                    
+		                                    </li>
+		                                    <li class="menu-item-has-children"> <a  href="/shopping-cart"  > <i class="fa fa-cart-plus" style="margin-right: 5px !important;"></i> cart</a>
+		                                    
 		                                    </li>
 		                                    <!--Courses Menu End-->
-                                            
-											<!--Events Menu Start-->
-											<li class="menu-item-has-children"> <a href="#">Events</a>
-												<ul class="sub-menu">
-													<li><a href="events.html">Events</a></li>
-													<li><a href="events-details.html">Events Details</a></li>
-												</ul>
-											</li>
+                                            @if(Auth::check())
+                                            <li class="menu-item-has-children">
+                                            <a  href="/results"  > <i class="fa fa-user" style="margin-right: 5px !important;"></i> {{auth::user()->name}}</a>
+                                            </li>
+                                            @else
+                                            <li class="menu-item-has-children">
+                                            <a      href="/login"   >LOGIN</a>
+
+                                            </li>
+                                            @endif
 											<!--Events Menu End-->
-											
-											<!--blog Menu Start-->
-											<li class="menu-item-has-children"> <a href="#">Blog</a>
-												<ul class="sub-menu">
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="blog-details.html">Blog Details</a></li>
-												</ul>
-											</li>
-											<!--blog Menu End-->
                                             
-											<!--Contact Menu Start-->
-											<li> <a href="contact.html">Contact</a></li>
-								            <!--Contact Menu End-->
+											
+											
 										</ul>
 									</nav>
+                                 
 								</div>
-								<div class="searce-box">
-                                    <a class="rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i class="fa fa-search"></i></a>
-                                </div>
-							</div>													
+							</div>
 						</div>
 					</div>
 				</div>
@@ -310,68 +255,36 @@
 			</div>
 			
 			<!-- Footer Top -->
-            <div class="footer-top">
+           	<!-- Footer Top -->
+               <div class="footer-top">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-12">
                             <div class="about-widget">
-                                <img src="images/logo-footer.png" alt="Footer Logo">
-                                <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the elegance of unique.</p>
-                                <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
+                                <img src="main/images/logo-footer.png" alt="Footer Logo">
+                                <p> An online educational platform dedicated to those who want to sit for the IELTS exam and prepare for it well. </p>
+                                <!-- <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p> -->
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-12">
-                            <h5 class="footer-title">RECENT POSTS</h5>
-                            <div class="recent-post-widget">
-                                <div class="post-item">
-                                    <div class="post-date">
-                                        <span>28</span>
-                                        <span>June</span>
-                                    </div>
-                                    <div class="post-desc">
-                                        <h5 class="post-title"><a href="#">While the lovely valley team work</a></h5>
-                                        <span class="post-category">Keyword Analysis</span>
-                                    </div>
-                                </div>
-                                <div class="post-item">
-                                    <div class="post-date">
-                                        <span>28</span>
-                                        <span>June</span>
-                                    </div>
-                                    <div class="post-desc">
-                                        <h5 class="post-title"><a href="#">I must explain to you how all this idea</a></h5>
-                                        <span class="post-category">Spoken English</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-3 col-md-12">
                             <h5 class="footer-title">OUR SITEMAP</h5>
                             <ul class="sitemap-widget">
-                                <li class="active"><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
-                                <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
-                                <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
-                                <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>                                
-                                <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                                <li><a href="blog-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog Details</a></li>
-                                <li><a href="teachers.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a></li>
-                                <li><a href="teachers-single.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers Details</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
-                                <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>
+                                <li class="active"><a href="/homes"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
+                                <li ><a href="/maintopics"><i class="fa fa-angle-right" aria-hidden="true"></i>Tests</a></li>
+                                <li><a href="/maincorses"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
+                                <li><a href="/login"><i class="fa fa-angle-right" aria-hidden="true"></i>LogIn</a></li>
+                                <li><a href="/register"><i class="fa fa-angle-right" aria-hidden="true"></i>Register</a></li>
+                                
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12">
-                            <h3 class="footer-title">FLICKR FEED</h3>
-                            <ul class="flickr-feed">
-                                <li><a href="#"><img src="main/images/flickr/1.jpg" alt="Project Image"></a></li>
-                                <li><a href="#"><img src="main/images/flickr/2.jpg" alt="Project Image"></a></li>
-                                <li><a href="#"><img src="main/images/flickr/3.jpg" alt="Project Image"></a></li>
-                                <li><a href="#"><img src="main/images/flickr/4.jpg" alt="Project Image"></a></li>
-                                <li><a href="#"><img src="main/images/flickr/5.jpg" alt="Project Image"></a></li>
-                                <li><a href="#"><img src="main/images/flickr/6.jpg" alt="Project Image"></a></li>
-                            </ul>
+                            <h5 class="footer-title">NEWSLETTER</h5>
+                            <p>Sign Up to Our Newsletter to Get Latest Updates &amp; Services</p>
+                            <form class="news-form">
+                                <input type="text" class="form-input" placeholder="Enter Your Email">
+                                <button type="submit" class="form-button"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                            </form>
                         </div>
                     </div>
                     <div class="footer-share">
@@ -390,7 +303,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="copyright">
-                        <p>© 2018 <a href="#">RS Theme</a>. All Rights Reserved.</p>
+                        <p>© 2021 <a href="#"></a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -476,7 +389,8 @@
 		 <!-- main js -->
         <script src="{{asset('main/js/main.js')}}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+        <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 
         
         

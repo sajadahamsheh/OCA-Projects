@@ -14,16 +14,31 @@ use Illuminate\Support\Facades\Session ;
 class cartController extends Controller
 {
     public function addToCart(Courses $course ) {
-        
+        $vars=Order ::where('user_id', Auth::id())->get();
+        $saja=array();
+        foreach ($vars as $var){
+            $orders = order_courses::where('order_id',$var->id)->get();    
+            array_push($saja,$orders);
+            
+        }
         if (session()->has('cart')) {
             $cart = new Cart(session()->get('cart'));
         } else {
             $cart = new Cart();
         }
-        $cart->add($course);
-        // dd($cart);
-        session()->put('cart', $cart);
-        return back()->with('success', 'course was added');
+        
+       
+        dd($saja);
+
+        if (isset ($cart->items[$course['id']])&&($saja[$course['id']]) ) {
+            return back()->with('fail', 'course is already in the cart');
+            
+        }else{
+            $cart->add($course);
+            session()->put('cart', $cart);
+            return back()->with('success', 'course was added Successfully');
+        }
+        // dd($cart->items['id']);
     }
 
 

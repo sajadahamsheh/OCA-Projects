@@ -4,21 +4,21 @@
     
     <!-- Breadcrumbs Start -->
     <div class="rs-breadcrumbs bg7 breadcrumbs-overlay">
-    <div class="breadcrumbs-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 class="page-title">TEACHERS SINGLE</h1>
-                    <ul>
-                        <li>
-                            <a class="active" href="index.html">Home</a>
-                        </li>
-                        <li>Teachers Single</li>
-                    </ul>
+        <div class="breadcrumbs-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="page-title">profile</h1>
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li>profile</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- Breadcrumbs End -->
 
@@ -28,30 +28,14 @@
             <div class="row team">
             
                 <div class="col-lg-6 col-md-12">
-                    <div class="team-photo mobile-mb-40">
+                    <div class="team-photo mobile-mb-40" style="margin-top: 50px !important;">
                
-                    <h3 class="team-name">{{ auth::user()->name}}</h3>
-                    <p class="team-title">
-                        Assistant Professor (Accounting)
-                        <span>Business Studies</span>
-                    </p>
+                    <h3 class="team-name">{{ auth::user()->name}}' profile </h3>
+                   
                     <p class="team-contact">
                         <i class="fa fa-mobile"></i> (+088) 2957 439 <i class="ml-15 fa fa-envelope-o"></i> ({{ auth::user()->email}})
                     </p>
-                        <!-- <div class="team-icons">
-                            <a href="#" title="facebook">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                            <a href="#" title="twitter">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#" title="google plus">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#" title="linkedin">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div> -->
+                       
                     </div>
                 </div>
             
@@ -107,32 +91,39 @@
                 <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem.</p>
             </div>
             <div class="row">
-                @foreach ($orders as $order)
+                @foreach ($saja as $order)
+                @foreach ($order as $orders)
+              
                 
+              
+                 
                     @foreach ($courses as $course) 
-                    @if(($order['course_id'])==$course['id'])
-                  
+                    @if(($orders['course_id'])==$course['id'])
+                 
+
                     <div class="col-lg-3 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <a href="#"><img style="width: 270px;height: 270px;"  src="images/{{$course['course_img']}}" alt="" /></a>
-                            <div class="social-icon">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-google-plus"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <div class="team-item">
+                            <div class="team-img">
+                                <a href="#"><img style="width: 270px;height: 270px;"  src="images/{{$course['course_img']}}" alt="" /></a>
+                                <div class="social-icon">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="team-body">
-                            <h3 class="name">{{$order['order_details']}}</h3>
-                            <span class="designation"><a href="">Enrol now</a></span>
-                        </div>
-                    </div>						
-                </div>
+                            <div class="team-body">
+                                <h3 class="name">{{$orders['order_details']}}</h3>
+                                <span class="designation"><a href="">Enrol now</a></span>
+                            </div>
+                        </div>						
+                    </div>
                     @endif
                     @endforeach
                     
                     @endforeach
+                    @endforeach
+                    
                 
               
                 

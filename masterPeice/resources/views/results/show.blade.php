@@ -25,7 +25,7 @@
 
     <div class="panel panel-default" style="margin: 40px;">
         <div class="panel-heading">
-            VIEW RESULT
+            YOUR RESULT
         </div>
 
         <div class="panel-body">
@@ -80,7 +80,9 @@
             <p>&nbsp;</p>
 
             <a href="/maintopics" class="btn btn-default">Take another quiz</a>
-            <a href="{{ route('results.index') }}" class="btn btn-default">See all my results</a>
+            @if(Auth::check())
+            <a href="{{ route('results.index') }}" class="btn btn-default">See my all results</a>
+            @endif
         </div>
     </div>
 @stop

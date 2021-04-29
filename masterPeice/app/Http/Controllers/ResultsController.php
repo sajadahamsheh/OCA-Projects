@@ -24,10 +24,14 @@ class ResultsController extends Controller
     public function index()
     {
         $vars=Order ::where('user_id', Auth::id())->get();
+        $saja=array();
         foreach ($vars as $var){
             $orders = order_courses::where('order_id',$var->id)->get();    
+            array_push($saja,$orders);
+            
         }
-        
+
+        // dd($saja);
         
         $courses = Courses::all();
         // $products = $products::where('order_id' , $id) -> get() ;
@@ -38,7 +42,7 @@ class ResultsController extends Controller
            
         }
         
-        return view('results.index', compact('results','orders','courses','vars'));
+        return view('results.index', compact('results','saja','courses','vars'));
     }
 
     /**

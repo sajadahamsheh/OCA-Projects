@@ -124,7 +124,7 @@
 			<header id="rs-header" class="rs-header">
 				
 				<!-- Header Top Start -->
-				<div class="rs-header-top">
+				<!-- <div class="rs-header-top">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-4 col-sm-12">
@@ -160,7 +160,7 @@
 							</div>
 						</div>				
 					</div>
-				</div>
+				</div> -->
 				<!-- Header Top End -->
 
 				<!-- Menu Start -->
@@ -176,147 +176,84 @@
 									<nav class="rs-menu">
 										<ul class="nav-menu">
 											<!-- Home -->
-											<li class="current-menu-item current_page_item menu-item-has-children"> <a href="#" class="home">Home</a>
-												<ul class="sub-menu">
-												  <li class="active"><a href="index.html">Home One</a> </li>
-												  <li><a href="index2.html">Home Two</a> </li>
-												  <li><a href="index3.html">Home Three</a></li>
-												  <li><a href="index4.html">Home Four</a> </li>
-												  <li><a href="index5.html">Home Five</a> </li>
-												  <li><a href="instructor-home.html">Home Instructor</a> </li>
-												  <li><a href="index7.html">Home Seven</a> </li>
-												  <li><a href="index8.html">Home Eight</a> </li>
-												</ul>
+											<li class="current-menu-item current_page_item menu-item-has-children"> <a href="/home" class="home">Home</a>
+						
 											</li>
 											<!-- End Home --> 
                                             
                                             <!--About Menu Start-->
                                             <li class="menu-item-has-children"> <a href="#">About Us</a>
-                                                <ul class="sub-menu">
-                                                    <li> <a href="about.html">About One</a></li>
-                                                    <li><a href="about2.html">About Two</a></li>
-                                                    <li><a href="about3.html">About Three</a></li>
-                                                </ul>
                                             </li>
                                             <!--About Menu End--> 
 
                                             <!-- Drop Down Pages Start -->
-											<li class="rs-mega-menu mega-rs"> <a href="#">Mega</a>
-                                                <ul class="mega-menu"> 
-                                                    <li class="mega-menu-container">
-                                                        <div class="mega-menu-innner">
-                                                            <div class="single-magemenu">
-                                                                <ul class="sub-menu">
-                                                                    <li> <a href="about.html">About One</a></li>
-                                                                    <li><a href="about2.html">About Two</a></li>
-                                                                    <li><a href="blog.html">Blog</a></li>
-													                <li><a href="blog-details.html">Blog Details</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="single-magemenu">
-                                                                <ul class="sub-menu">
-                                                                    <li> <a href="teachers.html">Teachers</a> </li>
-                                                                    <li> <a href="teachers-without-filter.html">Teachers Without Filter</a> </li> 
-                                                                    <li> <a href="teachers-single.html">Teachers Single</a> </li>
-                                                                    <li> <a href="contact.html">Contact</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="single-magemenu">
-                                                                <ul class="sub-menu">
-                                                                    <li> <a href="gallery.html">Gallery One</a> </li>
-                                                                    <li> <a href="gallery2.html">Gallery Two</a> </li> 
-                                                                    <li> <a href="gallery3.html">Gallery Three</a> </li>
-                                                                    <li><a href="error-404.html">Error 404</a></li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="single-magemenu">
-                                                                <ul class="sub-menu">
-                                                                    <li> <a href="shop.html">Shop</a> </li> 
-                                                                    <li> <a href="shop-details.html">Shop Details</a> </li>
-                                                    
-                                                                    <li><a href="cart.html">Cart</a></li>
-                                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+											<li class="rs-mega-menu mega-rs"> <a href="maintopics">Tests</a>
+                                                
 											</li>
 											<!--Drop Down Pages End -->
                                             
 											<!--Courses Menu Start-->
-		                                    <li class="menu-item-has-children"> <a href="#">Courses</a>
-		                                      <ul class="sub-menu">
-		                                        <li><a href="courses.html">Courses One</a></li>
-		                                        <li><a href="courses2.html">Courses Two</a></li>
-		                                        <li><a href="courses-details.html">Courses Details</a></li>
-                                                  <li><a href="courses-details2.html">Courses Details 2</a></li>
-		                                      </ul>
+		                                    <li class="menu-item-has-children"> <a href="/maincourses">Courses</a>
+		                                    
 		                                    </li>
-		                                    <!--Courses Menu End-->
-                                            
-											<!--Events Menu Start-->
-											<li class="menu-item-has-children"> <a href="#">Events</a>
-												<ul class="sub-menu">
-													<li><a href="events.html">Events</a></li>
-													<li><a href="events-details.html">Events Details</a></li>
-                                                    <li> <a href="contact.html">Contact</a></li>
-												</ul>
-											</li>
-											<!--Events Menu End-->
-                                            
-                                            <!-- Drop Down -->
-											<li class="menu-item-has-children"> <a href="#">Pages</a>
-                                                <ul class="sub-menu"> 
-                                                    <li class="menu-item-has-children"> <a href="#">Teachers</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="teachers.html">Teachers</a> </li>
-                                                        <li> <a href="teachers-without-filter.html">Teachers Without Filter</a> </li> 
-                                                        <li> <a href="teachers-single.html">Teachers Single</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li class="menu-item-has-children"> <a href="#">Gallery</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="gallery.html">Gallery One</a> </li>
-                                                        <li> <a href="gallery2.html">Gallery Two</a> </li> 
-                                                        <li> <a href="gallery3.html">Gallery Three</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li class="menu-item-has-children"> <a href="#">Shop</a>
-                                                      <ul class="sub-menu">
-                                                        <li> <a href="shop.html">Shop</a> </li> 
-                                                        <li> <a href="shop-details.html">Shop Details</a> </li>
-                                                      </ul>
-                                                    </li>
-                                                    
-                                                    <li><a href="cart.html">Cart</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    
-                                                    <li><a href="error-404.html">Error 404</a></li>
-                                                </ul>
-											</li>
-											<!--End Icons -->
-											
-											<!--blog Menu Start-->
-											<li class="menu-item-has-children"> <a href="#">Blog</a>
-												<ul class="sub-menu">
-													<li><a href="blog.html">Blog</a></li>
-													<li><a href="blog-details.html">Blog Details</a></li>
-												</ul>
-											</li>
-											<!--blog Menu End-->
-                                            
-											<!--Contact Menu Start-->
-											<li> <a href="contact.html">Contact</a></li>
-								            <!--Contact Menu End-->
-										</ul>
-									</nav>
+                                        </ul>
+                                   
+                                    </nav>
+                                   
+                               
                                     <div class="right-bar-icon rs-offcanvas-link text-right">
-                                        <a class="hidden-xs rs-search" data-target=".search-modal" data-toggle="modal" href="#"><i class="fa fa-search"></i></a>
+                                        <div  class="d-flex">
+                                            <!-- Authentication Links -->
+                                            @guest
+                                                
+                                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                                
+                                                @if (Route::has('register'))
+                                                   
+                                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                                    
+                                                @endif
+                                                @else
+                                                    <li class="nav-item dropdown">
+                                                        <a id="dropdownMenuLink" class="dropdown-toggle" href="/result" role="button"
+                                                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                                            {{ Auth::user()->name }} 
+                                                        </a>
+                        
+                                                        @if(\Illuminate\Support\Facades\Auth::guard('admin')->check())
+                                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                                                   onclick="event.preventDefault();
+                                                                             document.getElementById('admin-logout-form').submit();">
+                                                                    {{ __('Logout') }}
+                                                                </a>
+                        
+                                                                <form id="admin-logout-form" action="{{ route('admin.logout') }}" method="POST"
+                                                                      style="display: none;">
+                                                                    @csrf
+                                                                </form>
+                                                            </div>
+                                                        @else
+                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+                                                                <li>
+                                                                    
+                                                                <a class="dropdown-item"  style="color: #bbbbbb !important;"  href="{{ route('user.logout') }}"
+                                                                   onclick="event.preventDefault();
+                                                                             document.getElementById('user-logout-form').submit();">
+                                                                    {{ __('Logout') }}
+                                                                </a>
+                        
+                                                                <form id="user-logout-form" action="{{ route('user.logout') }}" method="POST"
+                                                                      style="display: none;">
+                                                                    @csrf
+                                                                </form>
+                                                            </li>
 
-                                        <a id="nav-expander" class="nav-expander fixed"><i class="fa fa-bars fa-lg white"></i></a>
+                                                            </ul>
+                                                        @endif
+                                                    </li>
+                                                    @endguest
+                                        </div>
                                     </div>
 								</div>
 							</div>
@@ -334,29 +271,7 @@
         @yield('content')
 
         
-        <!-- Partner Start -->
-        <div id="rs-partner" class="rs-partner pt-70 pb-70">
-            <div class="container">
-				<div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="80" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="4" data-ipad-device-nav="false" data-ipad-device-dots="false" data-md-device="5" data-md-device-nav="false" data-md-device-dots="false">
-                    <div class="partner-item">
-                        <a href="#"><img src="main/images/partner/1.png" alt="Partner Image"></a>
-                    </div>
-                    <div class="partner-item">
-                        <a href="#"><img src="main/images/partner/2.png" alt="Partner Image"></a>
-                    </div>
-                    <div class="partner-item">
-                        <a href="#"><img src="main/images/partner/3.png" alt="Partner Image"></a>
-                    </div>
-                    <div class="partner-item">
-                        <a href="#"><img src="main/images/partner/4.png" alt="Partner Image"></a>
-                    </div>
-                    <div class="partner-item">
-                        <a href="#"><img src="main/images/partner/5.png" alt="Partner Image"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Partner End -->
+      
        
         <!-- Footer Start -->
         <footer id="rs-footer" class="bg3 rs-footer">
@@ -405,50 +320,20 @@
                         <div class="col-lg-3 col-md-12">
                             <div class="about-widget">
                                 <img src="main/images/logo-footer.png" alt="Footer Logo">
-                                <p>We create Premium Html Themes for more than three years. Our team goal is to reunite the elegance of unique.</p>
-                                <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p>
+                                <p> An online educational platform dedicated to those who want to sit for the IELTS exam and prepare for it well. </p>
+                                <!-- <p class="margin-remove">We create Unique and Easy To Use Flexible Html Themes.</p> -->
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-12">
-                            <h5 class="footer-title">RECENT POSTS</h5>
-                            <div class="recent-post-widget">
-                                <div class="post-item">
-                                    <div class="post-date">
-                                        <span>28</span>
-                                        <span>June</span>
-                                    </div>
-                                    <div class="post-desc">
-                                        <h5 class="post-title"><a href="#">While the lovely valley team work</a></h5>
-                                        <span class="post-category">Keyword Analysis</span>
-                                    </div>
-                                </div>
-                                <div class="post-item">
-                                    <div class="post-date">
-                                        <span>28</span>
-                                        <span>June</span>
-                                    </div>
-                                    <div class="post-desc">
-                                        <h5 class="post-title"><a href="#">I must explain to you how all this idea</a></h5>
-                                        <span class="post-category">Spoken English</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-3 col-md-12">
                             <h5 class="footer-title">OUR SITEMAP</h5>
                             <ul class="sitemap-widget">
-                                <li class="active"><a href="index.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
-                                <li ><a href="about.html"><i class="fa fa-angle-right" aria-hidden="true"></i>About</a></li>
-                                <li><a href="courses.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
-                                <li><a href="courses-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses Details</a></li>
-                                <li><a href="events.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events</a></li>
-                                <li><a href="events-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Events Details</a></li>                                
-                                <li><a href="blog.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog</a></li>
-                                <li><a href="blog-details.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Blog Details</a></li>
-                                <li><a href="teachers.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers</a></li>
-                                <li><a href="teachers-single.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Teachers Details</a></li>
-                                <li><a href="contact.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Contact</a></li>
-                                <li><a href="error-404.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Error 404</a></li>
+                                <li class="active"><a href="/homes"><i class="fa fa-angle-right" aria-hidden="true"></i>Home</a></li>
+                                <li ><a href="/maintopics"><i class="fa fa-angle-right" aria-hidden="true"></i>Tests</a></li>
+                                <li><a href="/maincorses"><i class="fa fa-angle-right" aria-hidden="true"></i>Courses</a></li>
+                                <li><a href="/login"><i class="fa fa-angle-right" aria-hidden="true"></i>LogIn</a></li>
+                                <li><a href="/register"><i class="fa fa-angle-right" aria-hidden="true"></i>Register</a></li>
+                                
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-12">
@@ -476,7 +361,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <div class="copyright">
-                        <p>© 2018 <a href="#">RS Theme</a>. All Rights Reserved.</p>
+                        <p>© 2021 <a href="#"></a>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
@@ -619,6 +504,7 @@
         <script src="{{asset('main/js/main.js')}}"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         
 		
     </body>

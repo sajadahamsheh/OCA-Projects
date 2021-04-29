@@ -6,15 +6,15 @@
         	<div id="home-slider">
 				<!-- Item 1 -->
 				<div class="item active">
-					<img src="main/images/slider/home1/slide1.jpg" alt="Slide1" />
+					<img src="main/images/slider/home1/slider1.jpg" alt="Slide1" style="width:1920px !important ; height: 820px !important;" />
 					<div class="slide-content">
 						<div class="display-table">
 							<div class="display-table-cell">
 								<div class="container text-center">
 									<h1 class="slider-title" data-animation-in="fadeInLeft" data-animation-out="animate-out">WELCOME TO EDULEARN</h1>
 									<p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>  
-									<a href="#" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn" data-animation-out="animate-out">READ MORE</a>
-									<a href="#" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">GET STARTED NOW</a>
+									<a href="/maintopics" class="sl-readmore-btn mr-30" data-animation-in="lightSpeedIn" data-animation-out="animate-out">TAKE A TEST</a>
+									<a href="/maincorses" class="sl-get-started-btn" data-animation-in="lightSpeedIn" data-animation-out="animate-out">SEE OUR COURSES</a>
 								</div>
 							</div>
 						</div>
@@ -23,15 +23,15 @@
 
 				<!-- Item 2 -->
 				<div class="item">
-					<img src="main/images/slider/home1/slide2.jpg" alt="Slide2" />
+					<img src="main/images/slider/home1/slider2.jpg" alt="Slide2" style="width:1920px !important ; height: 820px !important;" />
 					<div class="slide-content">
 						<div class="display-table">
 							<div class="display-table-cell">
 								<div class="container text-center">
 									<h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">ARE YOU READY TO APPLY?</h1>
 									<p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br class="hidden-sm-dow"> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>  
-									<a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
-									<a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a>
+									<a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">TAKE A TEST</a>
+									<a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">SEE OUR COURSES</a>
 								</div>
 							</div>
 						</div>
@@ -40,15 +40,15 @@
 
 				<!-- Item 3 -->
 				<div class="item">
-					<img src="main/images/slider/home1/slide3.jpg" alt="Slide3" />
+					<img src="main/images/slider/home1/slider3.jpg" alt="Slide3" style="width:1920px !important ; height: 820px !important;" />
 					<div class="slide-content">
 						<div class="display-table">
 							<div class="display-table-cell">
 								<div class="container text-center">
 									<h1 class="slider-title" data-animation-in="fadeInUp" data-animation-out="animate-out">ARE YOU READY TO APPLY?</h1>
 									<p data-animation-in="fadeInUp" data-animation-out="animate-out" class="slider-desc">Fusce sem dolor, interdum in efficitur at, faucibus nec lorem.Sed nec molestie justo.<br> Nunc quis sapien in arcu pharetra volutpat.Morbi nec vulputate dolor.</p>  
-									<a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">READ MORE</a>
-									<a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">GET STARTED NOW</a>
+									<a href="#" class="sl-readmore-btn mr-30" data-animation-in="fadeInUp" data-animation-out="animate-out">TAKE A TEST</a>
+									<a href="#" class="sl-get-started-btn" data-animation-in="fadeInUp" data-animation-out="animate-out">SEE OUR COURSES</a>
 								</div>
 							</div>
 						</div>
@@ -102,7 +102,7 @@
                     	        <i class="fa fa-graduation-cap rs-animation-scale-up"></i>
                     	    </div>
                     	    <div class="services-desc">
-                    	        <h4 class="services-title">Certification</h4>
+                    	        <h4 class="services-title">Online Tests </h4>
                     	        <p>Lorem ipsum dolor sit amet Sed nec molestie justo</p>
                     	    </div>
                     	</div>
@@ -117,7 +117,7 @@
             <div class="container">
                 <div class="sec-title mb-50 text-center">
                     <h2>ABOUT US</h2>      
-                	<p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p>
+                	<!-- <p>Fusce sem dolor, interdum in fficitur at, faucibus nec lorem. Sed nec molestie justo.</p> -->
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
@@ -131,7 +131,7 @@
                     <div class="col-lg-6 col-md-12">
                     	<div class="about-desc">
                 		    <h3>WELCOME TO EDULEARN</h3>      
-                			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                			<p>An online educational platform dedicated to those who want to sit for the IELTS exam and prepare for it well</p>
                     	</div>
 						<div id="accordion" class="rs-accordion-style1">
 						    <div class="card">
@@ -154,7 +154,7 @@
 						        </div>
 						        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 						            <div class="card-body">
-						                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+						                The website will provide a complete simulation of the IELTS exam in all its topics. The website will have a special place for all topics in the exam, which will be free of charge, and each topic contains many exams. The user will be able to choose the exam he wants and then evaluate himself through his mark that appears to him after each exam and based on it we will suggest to him from the courses available on the site before taking the IELTS exam.
 						            </div>
 						        </div>
 						    </div>
@@ -166,7 +166,7 @@
 						        </div>
 						        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
 						            <div class="card-body">
-						                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+						                An online educational platform dedicated to those who want to sit for the IELTS exam and prepare for it well
 						            </div>
 						        </div>
 						    </div>
@@ -176,6 +176,7 @@
             </div>
         </div>
         <!-- About Us End -->
+
  		<!-- Courses Start -->
  		<div id="rs-courses" class="rs-courses sec-color sec-spacer">
 			<div class="container">
@@ -183,7 +184,7 @@
                     <h2>COURSES ON DESCOUNT</h2>      
                 </div>
 				<div class="row">
-			        <div class="col-md-12">
+			        <div class="col-md-12" >
 						<div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="false" data-autoplay-timeout="5000" data-smart-speed="1200" data-dots="true" data-nav="true" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="true" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="true" data-ipad-device-dots="true" data-md-device="3" data-md-device-nav="true" data-md-device-dots="true">
 				
 					@foreach ($courses as $course)
@@ -191,7 +192,7 @@
 			                <div class="cource-item">
 			                    <div class="cource-img">
 			                        <img style="height: 270px ; width: 370px;" src="/images/{{$course['course_img']}}" alt="" />
-                                    <a class="image-link" href="courses-details.html" title="University Tour 2018">
+                                    <a class="image-link" href="singelcourse/{{$course['id']}}" title="University Tour 2018">
                                         <i class="fa fa-link"></i>
                                     </a>
 									@php
@@ -203,10 +204,10 @@
 			                    <div class="course-body">
 									@foreach ($cats as $cat)
 										@if($course->cat_id == $cat->id)	
-			                    	<a href="#" class="course-category">{{$cat->cat_name}}</a>
+			                    	<a href="/maincourses" class="course-category"><small>categoy | </small>{{$cat->cat_name}}</a>
 										@endif
 									@endforeach
-			                    	<h4 class="course-title"><a href="courses-details.html">{{$course['course_name']}}</a></h4>
+			                    	<h4 class="course-title"><a href="singelcourse/{{$course['id']}}"><small>course name</small> </br> {{$course['course_name']}}</a></h4>
 									<div class="review-wrap">
 			                    		<ul class="rating">
 			                    		    BEFORE
@@ -214,19 +215,19 @@
 			                    		<span class="review"><del>{{$course->course_price}}$  </del> </span>
 			                    	</div>
 			                    	
-			                    	<div class="course-desc">
+			                    	<div class="course-desc"  style="padding-bottom: 5px !important;">
 			                    		<p>
 			                    			{{$course->course_desc}}
 			                    		</p>
 			                    	</div>
 			                    </div>
-			                    <div class="course-footer">
+			                    <!-- <div class="course-footer">
 			                    	<div class="course-time">
 			                    		<span class="label">Course Teacher</span>
 			                    		<span class="desc">3 Year</span>
 			                    	</div>
 			                    	
-			                    </div>
+			                    </div> -->
 			                </div>
 			             @endif  
 				@endforeach
@@ -236,6 +237,7 @@
 			</div>
         </div>
         <!-- Courses End -->
+
         <!-- counter start -->
 		<div class="rs-counter pt-100 pb-70 bg3">
 			<div class="container">
@@ -285,19 +287,20 @@
             </div>
         </div>
 		<!-- counter end -->
+
 		 <!-- Courses Categories Start -->
 		 <div id="rs-learning-objectives" class="rs-learning-objectives pt-100 pb-70">
             <div class="container">
                 <div class="sec-title mb-50">
                     <h2>TESTS TOPICS</h2>
-                    <p>I must explain to you how all this mistaken idea of denouncing pleasure.</p>
+                    <p>a lots of tests help you to To improve your English .</p>
                 </div>
                     <div class="row">
                        @foreach ($topics as $topic)
                         <div class="col-lg-4 col-md-6">
                             <div class="courses-item">
                                 <i class="glyph-icon flaticon-book"></i>
-                                <h4 class="courses-title"><a href="#">{{$topic['title']}}</a></h4>
+                                <h4 class="courses-title"><a href="/{{$topic['id']}}">{{$topic['title']}}</a></h4>
                                 <p>At vero eos et accusamus et iusto odiodignissimos laborumducimus qui blanditiis voluptatum dolor sit</p>
                             </div>
                         </div>
@@ -321,4 +324,44 @@
             </div>
         </div>
         <!-- Calltoaction End -->
+
+		  <!-- Partner Start -->
+		  <div id="rs-partner" class="rs-partner pt-70 pb-70">
+			 
+            <div class="container">
+				<div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="80" data-autoplay="true" data-autoplay-timeout="5000" data-smart-speed="2000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="2" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="4" data-ipad-device-nav="false" data-ipad-device-dots="false" data-md-device="5" data-md-device-nav="false" data-md-device-dots="false">
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" s src="main/images/partner/1.png" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/2.png" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/3.png" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/4.png" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/5.jpg" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/6.jpg" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/7.jpg" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/8.png" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/9.jpg" alt="Partner Image"></a>
+                    </div>
+                    <div class="partner-item">
+                        <a href="#"><img style="width: 160px !important; height: 220px !important;" src="main/images/partner/10.jpg" alt="Partner Image"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partner End -->
         @endsection

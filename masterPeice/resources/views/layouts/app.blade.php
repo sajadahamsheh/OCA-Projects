@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'saja') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,10 +21,10 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: black !important; color: white !important;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                <img src="main/images/logo-white.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -42,12 +42,12 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     @guest
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <li class="nav-item" style="color: aliceblue i !important;"> 
+                            <a style="color: aliceblue !important;"  class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" style="color: aliceblue !important;"  href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                         @else
@@ -59,7 +59,7 @@
 
                                 @if(\Illuminate\Support\Facades\Auth::guard('admin')->check())
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                        <a class="dropdown-item"   href="{{ route('admin.logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('admin-logout-form').submit();">
                                             {{ __('Logout') }}
@@ -71,8 +71,8 @@
                                         </form>
                                     </div>
                                 @else
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('user.logout') }}"
+                                    <div class="dropdown-menu dropdown-menu-right"   aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item"   href="{{ route('user.logout') }}"
                                            onclick="event.preventDefault();
                                                      document.getElementById('user-logout-form').submit();">
                                             {{ __('Logout') }}
